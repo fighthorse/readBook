@@ -1,5 +1,4 @@
-# gin-vue-admin
-~~* [演示地址](http://zbj-home.picp.io)：入门级服务器，请轻点~~
+# readBook gin-vue-admin
 
 * 以动态路由的方式实现不同的角色加载不同的菜单
 
@@ -36,7 +35,7 @@
 </code></pre>
 
 ### 下载安装项目
-`go get -x github.com/bingjian-zhu/gin-vue-admin/cmd`
+`go get -x github.com/fighthorse/readBook/cmd`
 
 ### go后台程序运行方式
 

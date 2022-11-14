@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bingjian-zhu/gin-vue-admin/common/setting"
-	"github.com/bingjian-zhu/gin-vue-admin/common/validator"
-	"github.com/bingjian-zhu/gin-vue-admin/routers"
+	"github.com/fighthorse/readBook/common/setting"
+	"github.com/fighthorse/readBook/common/validator"
+	"github.com/fighthorse/readBook/routers"
 	"github.com/gin-gonic/gin/binding"
 )
 

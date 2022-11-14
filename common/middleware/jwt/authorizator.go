@@ -1,7 +1,7 @@
 package jwt
 
 import (
-	"github.com/bingjian-zhu/gin-vue-admin/models"
+	"github.com/fighthorse/readBook/models"
 	"github.com/gin-gonic/gin"
 )
 

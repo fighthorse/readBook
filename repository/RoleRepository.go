@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/bingjian-zhu/gin-vue-admin/common/logger"
-	"github.com/bingjian-zhu/gin-vue-admin/models"
+	"github.com/fighthorse/readBook/common/logger"
+	"github.com/fighthorse/readBook/models"
 )
 
 //RoleRepository 注入IDb

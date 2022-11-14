@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/bingjian-zhu/gin-vue-admin/models"
+import "github.com/fighthorse/readBook/models"
 
 //IRoleRepository Role接口定义
 type IRoleRepository interface {

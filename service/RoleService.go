@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/bingjian-zhu/gin-vue-admin/models"
-	"github.com/bingjian-zhu/gin-vue-admin/repository"
+	"github.com/fighthorse/readBook/models"
+	"github.com/fighthorse/readBook/repository"
 )
 
 // RoleService IRoleRepository

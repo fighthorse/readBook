@@ -1,6 +1,6 @@
 package service
 
-import "github.com/bingjian-zhu/gin-vue-admin/models"
+import "github.com/fighthorse/readBook/models"
 
 //IUserService UserService接口定义
 type IUserService interface {

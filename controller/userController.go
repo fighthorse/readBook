@@ -5,11 +5,11 @@ import (
 	"strconv"
 
 	jwt "github.com/appleboy/gin-jwt/v2"
-	"github.com/bingjian-zhu/gin-vue-admin/common/codes"
-	"github.com/bingjian-zhu/gin-vue-admin/common/logger"
-	"github.com/bingjian-zhu/gin-vue-admin/models"
-	"github.com/bingjian-zhu/gin-vue-admin/page"
-	"github.com/bingjian-zhu/gin-vue-admin/service"
+	"github.com/fighthorse/readBook/common/codes"
+	"github.com/fighthorse/readBook/common/logger"
+	"github.com/fighthorse/readBook/models"
+	"github.com/fighthorse/readBook/page"
+	"github.com/fighthorse/readBook/service"
 	"github.com/gin-gonic/gin"
 )
 

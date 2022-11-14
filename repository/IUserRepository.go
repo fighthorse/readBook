@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/bingjian-zhu/gin-vue-admin/models"
+import "github.com/fighthorse/readBook/models"
 
 //IUserRepository User接口定义
 type IUserRepository interface {
