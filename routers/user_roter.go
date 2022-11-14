@@ -4,8 +4,6 @@ import (
 	"log"
 
 	"github.com/facebookgo/inject"
-	"github.com/gin-gonic/gin"
-
 	"github.com/fighthorse/readBook/common/datasource"
 	"github.com/fighthorse/readBook/common/logger"
 	"github.com/fighthorse/readBook/common/middleware/cors"
@@ -14,21 +12,22 @@ import (
 	"github.com/fighthorse/readBook/controller"
 	"github.com/fighthorse/readBook/repository"
 	"github.com/fighthorse/readBook/service"
+	"github.com/gin-gonic/gin"
 )
 
 //InitRouter 初始化Router
-func InitRouter() *gin.Engine {
+func InitUserRouter() *gin.Engine {
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(cors.CorsHandler())
 	r.Use(gin.Recovery())
 	gin.SetMode(setting.Config.APP.RunMode)
-	Configure(r)
+	ConfigureUser(r)
 	return r
 }
 
 //Configure 配置router
-func Configure(r *gin.Engine) {
+func ConfigureUser(r *gin.Engine) {
 	//controller declare
 	var user controller.User
 	//var tag cv1.Tag
@@ -80,7 +79,7 @@ func Configure(r *gin.Engine) {
 
 	var adminMiddleware = myjwt.GinJWTMiddlewareInit(&jwt.AdminAuthorizator{})
 	apiv1 := r.Group("/api/v1")
-	//使用AdminAuthorizator中间件，只有admin权限的用户才能获取到接口
+	//使用AdminAuthorizator中间件
 	apiv1.Use(adminMiddleware.MiddlewareFunc())
 	{
 		//vue获取table信息

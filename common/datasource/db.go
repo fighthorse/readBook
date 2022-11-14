@@ -31,7 +31,7 @@ func (d *Db) Connect() error {
 
 	db, err := gorm.Open(dbType, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local", user, pwd, host, dbName))
 	if err != nil {
-		log.Fatal("connecting mysql error: ", err)
+		//log.Fatal("connecting mysql error: ", err)
 		return err
 	}
 	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {

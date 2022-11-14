@@ -13,6 +13,30 @@ import (
 
 func main() {
 	binding.Validator = new(validator.DefaultValidator)
+
+	// user
+	go UserServer()
+
+	AdminServer()
+}
+
+func UserServer() {
+	// User
+	router := routers.InitUserRouter()
+	conf := setting.Config.UserServer
+	s := &http.Server{
+		Addr:           fmt.Sprintf(":%s", conf.Port),
+		Handler:        router,
+		ReadTimeout:    conf.ReadTimeout * time.Second,
+		WriteTimeout:   conf.WriteTimeout * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+
+	_ = s.ListenAndServe()
+}
+
+func AdminServer() {
+	// ADMIN
 	router := routers.InitRouter()
 	conf := setting.Config.Server
 	s := &http.Server{
@@ -23,5 +47,5 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
-	s.ListenAndServe()
+	_ = s.ListenAndServe()
 }

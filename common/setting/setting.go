@@ -15,7 +15,9 @@ var (
 
 //Conf 配置结构体
 type Conf struct {
-	Server   Server   `yaml:"server"`
+	Server     Server `yaml:"server"`
+	UserServer Server `yaml:"user_server"`
+
 	Database Database `yaml:"database"`
 	Redis    Redis    `yaml:"redis"`
 	RabbitMQ RabbitMQ `yaml:"rabbitmq"`
