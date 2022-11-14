@@ -3,7 +3,6 @@ package routers
 import (
 	"log"
 
-	"github.com/facebookgo/inject"
 	"github.com/gin-gonic/gin"
 
 	"github.com/fighthorse/readBook/common/datasource"
